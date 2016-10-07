@@ -1,6 +1,7 @@
 # neuralHMM
 
-The code is in cleanup process. We will make all the code availabel soon.
+*The code is in cleanup process. We will make all the code availabel around 15/10.*
+
 Code of end to end unsupervised neural HMM. Please make a PR if you want to contribute to the code.
 
 ```
