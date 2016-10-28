@@ -70,8 +70,9 @@ $ python eval.py tagged_file.txt
 
 ## TODO:
 We use cutorch 1.0 in our experiments. Need to make this code compatible for last cutorch.
+- Map corresponding cpu tensors to CUDA tensors
 
 ## Acknowledgment
-The code is ultilized from
+The code is utilized from
 - Justin Johnson's [torch-rnn](https://github.com/jcjohnson/torch-rnn)
 - Yoon Kim's [char-lstm](https://github.com/yoonkim/lstm-char-cnn)
