@@ -62,10 +62,10 @@ Since unsupervised models are sensitive to initialization, ideally you would lik
 Another trick to get good performance is adding gradient noise (https://arxiv.org/abs/1511.06807). We didn't use this trick in our paper, but empirically we find that adding gradient noise often gives stable and good performance.
 
 ## Evaluation
-The evaluation script was prepared by [Yonatan Bisk](http://yonatanbisk.com/). It's quite self contained.
+The evaluation script was prepared by [Yonatan Bisk](http://yonatanbisk.com/). It's quite self contained.  It expects data in the format of one sentence per line with tags whitespace separated.
 
 ```
-$ python eval.py tagged_file.txt
+$ python eval.py predicted_tagged.txt gold_tagged.txt
 ```
 
 ## TODO:
