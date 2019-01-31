@@ -143,6 +143,7 @@ function BaumWelch:run(input, stats)
     end
     -- comment out the following line (renorm) in debugging mode
     utils.renorm(gamma, 3)
+    masked = masked:double()  -- convert to double tensor
     gamma:cmul(masked:view(N, T, 1):expand(N, T, K))
 
    --[[ Compute eta

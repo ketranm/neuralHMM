@@ -214,7 +214,10 @@ function train()
             nprobes = nprobes - 1
             -- reseeding
             torch.seed()
-            cutorch.seed()
+            if opt.cuda then
+              cutorch.seed()
+            end
+
             optim_config = {}
             optim_states = {}
             gnoise.t = 0
