@@ -35,6 +35,9 @@ function model:log_prob(input)
         self._logp = self._cache
     end
 
+    if input:type() == 'torch.IntTensor' then
+        input = input:long()
+    end
     return self._logp:index(2, input:view(-1)):view(-1, N, T):transpose(1, 2):transpose(2, 3)
 end
 

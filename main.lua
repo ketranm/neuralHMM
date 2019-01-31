@@ -273,8 +273,9 @@ function infer(textfile, predfile, modelfile)
             local x = sents[k+i]
             input[{{k+1}, {1, x:numel()}}] = x
         end
-
-        input = input:cuda()
+        if opt.cuda then
+          input = input:cuda()
+        end
         io.write(string.format('sent: %d\r', i))
         io.flush()
         local log_prior = prior_net:log_prob(input)
